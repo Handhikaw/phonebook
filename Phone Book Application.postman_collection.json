@@ -1,0 +1,627 @@
+{
+	"info": {
+		"_postman_id": "4d6fa381-fad4-4d89-86b5-2e14154229e3",
+		"name": "Phone Book Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8145773"
+	},
+	"item": [
+		{
+			"name": "contact",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "update Contact",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"phoneNumber\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/contact/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"contact",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"lastName\": \"Marley\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/contact/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"contact",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "2",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 06 Mar 2024 06:49:01 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 2,\n    \"firstName\": \"Bob\",\n    \"lastName\": \"Marley\",\n    \"phoneNumber\": \"087771122334\"\n}"
+								}
+							]
+						},
+						{
+							"name": "delete By Id",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/contact/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"contact",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "204 No Content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/contact/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"contact",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "2",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 06 Mar 2024 06:50:09 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "add",
+					"item": [
+						{
+							"name": "add New Contact",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"phoneNumber\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/contact/add",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"contact",
+										"add"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"test\",\n  \"lastName\": \"ting\",\n  \"phoneNumber\": \"628777123456\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/contact/add",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"contact",
+												"add"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 06 Mar 2024 06:44:09 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 4,\n    \"firstName\": \"test\",\n    \"lastName\": \"ting\",\n    \"phoneNumber\": \"628777123456\"\n}"
+								},
+								{
+									"name": "400 Bad Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"firstName\": \"test\",\n  \"lastName\": \"ting\",\n  \"phoneNumber\": \"1123\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/contact/add",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"contact",
+												"add"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 06 Mar 2024 06:44:50 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"code\": \"400\",\n    \"message\": \"Phone number is not valid\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "search",
+					"item": [
+						{
+							"name": "{value}",
+							"item": [
+								{
+									"name": "search Contact",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/contact/search/:value",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"contact",
+												"search",
+												":value"
+											],
+											"variable": [
+												{
+													"key": "value",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "200 OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/contact/search/:value",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"contact",
+														"search",
+														":value"
+													],
+													"variable": [
+														{
+															"key": "value",
+															"value": "handhika",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 06 Mar 2024 06:45:51 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"id\": 1,\n        \"firstName\": \"Handhika\",\n        \"lastName\": \"Wiryadana\",\n        \"phoneNumber\": \"081213074396\"\n    }\n]"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "all",
+					"item": [
+						{
+							"name": "get All Contact",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/contact/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"contact",
+										"all"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/contact/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"contact",
+												"all"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 06 Mar 2024 06:47:07 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"firstName\": \"Handhika\",\n        \"lastName\": \"Wiryadana\",\n        \"phoneNumber\": \"081213074396\"\n    },\n    {\n        \"id\": 2,\n        \"firstName\": \"Bob\",\n        \"lastName\": \"Martin\",\n        \"phoneNumber\": \"087771122334\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "delete All Tutorials",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/contact/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"contact",
+										"all"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "204 No Content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/contact/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"contact",
+												"all"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 06 Mar 2024 06:51:51 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}

@@ -1,0 +1,2 @@
+insert into CONTACT (FIRSTNAME,LASTNAME,PHONENUMBER) values('Handhika', 'Wiryadana','081213074396');
+insert into CONTACT (FIRSTNAME,LASTNAME,PHONENUMBER) values('Bob', 'Martin','087771122334');
